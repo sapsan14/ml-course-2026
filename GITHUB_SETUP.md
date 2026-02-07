@@ -2,6 +2,8 @@
 
 The project is ready locally. To put it on GitHub:
 
+Russian version: [GITHUB_SETUP_RU.md](GITHUB_SETUP_RU.md)
+
 ## 1. Create the repository on GitHub
 
 1. Go to [github.com/new](https://github.com/new).
