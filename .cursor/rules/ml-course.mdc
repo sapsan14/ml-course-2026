@@ -1,0 +1,13 @@
+---
+description: TalTech ML course 2026 — EX01 Pandas assignment context
+globs: ex1/**/*.ipynb, ex1/**/*.py, ex1/**/*.md
+---
+
+# ML course 2026 (TalTech) — EX01
+
+- This repo is for the course "Masinõppe rakendamine tehniliste erialade spetsialistidele" (Machine Learning for Engineers 2026).
+- **EX01** is data cleaning with Pandas: load `dirty_dataset.csv` (sep=";"), apply steps 1–15, output clean DataFrame and CSV.
+- **Variable names must match the assignment** (autotester expects them): `df_col_rename`, `df_name`, `df_age`, `df_date`, `df_salary`, `df_dropped`, `df_title`, `df_dupl`, `df_dt`, `df_cat`, `df_merged`, `df_sort`, `df_col_sorted`.
+- For detailed steps and copy-paste prompts for each step, use **ex1/ASSIGNMENT_EX01.md**.
+- Final columns order: Id, Liitumise_kuupäev, Aastat_liitumisest, Amet, Eesnimi, Perekonnanimi, Palk, Palk_kategooria, Vanus.
+- Submission is via **Google Colab** notebook link in Moodle; development can be done in Cursor. See **WORKFLOW.md**.

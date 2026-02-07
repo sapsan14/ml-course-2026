@@ -1,0 +1,18 @@
+Id;Nimi1;Vanus;Liitumise_Kuupäev;Tööala;Palk;Parkimine
+124;Alice  Johnson;25;2022-01-15;IT;50000;TRUE
+152;Bob smith;thirty;2023/02/20;IT;19100;
+632;Charlie BRown;35;2023-01-15;Finance;;
+853;David Lee;40;2022-04-05;IT;82040;TRUE
+963;eve davis;29;2025-05-10;HR;55001;FALSE
+84;Frank Miller;NaN;2023-06-01;;70200;
+905;Alice   Johnson;25;2021-01-15;OP;50050;
+863;Hanna Wilson;28;2014-07-15;HR;;
+137;Ryan Sapr;221;2023-07-10;FI;;
+973;Maria Lint;twenty;2023-08-01;IT;45000;yes
+963;Tom Rivers;-5;2023-10-10;Finance;60000;FALSE
+111;Jane K;30;2023.07.20;HR;55000;
+142;Mark Oto;31 yrs;2023-11-01;Ops;48000;TRUE
+245;Alice Johnson;25;2023-01-15;IT;50000;TRUE
+486;Bob Smith;thirty;2023/02/20;IT;19100;
+989;Charlie Brown;35;2023-01-15;Finance;;
+963;Charlie Brown;35;2023-01-15;Finance;;
