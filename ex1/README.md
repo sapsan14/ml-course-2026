@@ -39,6 +39,12 @@ Russian version: [README_RU.md](README_RU.md)
   ```
 - **Notes:** This runs all cells locally and updates outputs inside the notebook.
 
+## Autograder notes (EX01)
+
+- Age: convert to numeric, drop invalid rows (<0 or >120), then impute missing with median.
+- Salary: impute missing with mean (computed after age filtering).
+- Dates: keep `df_date` as datetime; `df_merged` uses string dates for merge; convert back to datetime before sorting and final outputs.
+
 ## EX01-EXTRA dataset
 
 - Download the CSV from Kaggle (IBM HR Analytics Employee Attrition & Performance).
