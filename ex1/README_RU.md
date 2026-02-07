@@ -54,6 +54,7 @@
 ## Датасет для EX01-EXTRA
 
 - Скачайте CSV с Kaggle (IBM HR Analytics Employee Attrition & Performance).
+- Альтернативная ссылка (Google Drive): https://drive.google.com/file/d/1x_cDdyA_pU71CGviivMs-7SUg-IPh_0I/view?usp=drivesdk
 - Положите файл рядом с ноутбуком или в `ex1/data/`.
 - Если файл в другом месте, задайте `path_override` в `EX01_EXTRA.ipynb` / `EX01_EXTRA_RU.ipynb`.
 

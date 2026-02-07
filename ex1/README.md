@@ -48,6 +48,7 @@ Russian version: [README_RU.md](README_RU.md)
 ## EX01-EXTRA dataset
 
 - Download the CSV from Kaggle (IBM HR Analytics Employee Attrition & Performance).
+- Alternative download link (Google Drive): https://drive.google.com/file/d/1x_cDdyA_pU71CGviivMs-7SUg-IPh_0I/view?usp=drivesdk
 - Place the file next to the notebook or into `ex1/data/`.
 - If you store it elsewhere, set `path_override` in `EX01_EXTRA.ipynb` / `EX01_EXTRA_RU.ipynb`.
 
