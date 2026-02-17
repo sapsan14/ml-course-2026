@@ -22,20 +22,20 @@ translations = {
     "annab pärast puhastamist kõikjal 0.": "после очистки возвращает везде 0.",
     "Salvesta muutujatesse ridade arv enne ja pärast puhastamist": "Сохраните количество строк до и после очистки в переменные",
     "ning võrdle neid.": "и сравните их.",
-    
+
     "## 3) Binaarne tuluveeru versioon": "## 3) Бинарная версия столбца дохода",
     "Loome `income_binary`": "Создаем `income_binary`",
     "1, kui `income` on `>50K`": "1, если `income` >50K",
     "0, vastasel juhul": "0 в противном случае",
     "luua uus veerg": "создать новый столбец",
     "ja kontrollida, et väärtused on ainult 0/1.": "и проверить, что значения только 0/1.",
-    
+
     "## 4) Lihtsad andmeanalüüsi ülesanded": "## 4) Простые задачи анализа данных",
     "Selles osas harjutad andmete uurimist": "В этой части вы попрактикуетесь в исследовании данных",
     "arvuta allpool toodud väärtused": "вычислите приведенные ниже значения",
     "Pandase abil ning salvestad tulemused muutujatesse.": "с помощью Pandas и сохраните результаты в переменные.",
     "ja salvesta need vastavatesse muutujatesse.": "и сохраните их в соответствующие переменные.",
-    
+
     "## 5) Visualiseerimine": "## 5) Визуализация",
     "Koosta järgmised graafikud": "Постройте следующие графики",
     "Vanuse jaotus (histogramm)": "Распределение возраста (гистограмма)",
@@ -47,7 +47,7 @@ translations = {
     "ja telgede sildid.": "и подписи осей.",
     "Korrelatsioonimaatriks kasutab ainult sobivaid numbrilisi veerge.": "Матрица корреляции использует только подходящие числовые столбцы.",
     "Vihje:* vajadusel tee kategooriate telje sildid loetavaks": "Подсказка:* при необходимости сделайте подписи категорий читаемыми",
-    
+
     "## 6) Salvesta tabel tagasi csv kujule": "## 6) Сохраните таблицу обратно в CSV",
     "Viimase sammuna salvestame": "В качестве последнего шага сохраняем",
     "puhastatud ja töödeldud andmestiku CSV-faili.": "очищенный и обработанный набор данных в CSV-файл.",
@@ -65,7 +65,7 @@ translations = {
     "kuvab eelduspäraseid veerge ja väärtusi.": "отображает ожидаемые столбцы и значения.",
     "Vihje:": "Подсказка:",
     "tee sellest endale koopia File --> Save a copy in Drive": "сделайте копию: File --> Save a copy in Drive",
-    
+
     # Code comment translations
     "# Mitu naist teenib rohkem kui 50K?": "# Сколько женщин зарабатывают более 50K?",
     "# Mitu meest teenib rohkem kui 50K?": "# Сколько мужчин зарабатывают более 50K?",
@@ -148,6 +148,8 @@ print(f"Avg age <=50K: {avg_age_under_50k:.2f}")
 
 # Visualization codes
 viz1_code = """
+df_viz = df_analysis.copy()
+
 # Vanuse jaotus (histogramm)
 # Распределение возраста (гистограмма)
 plt.figure(figsize=(10, 6))
@@ -221,7 +223,7 @@ for cell in nb["cells"]:
     # Translate Comments & Inject Code
     if cell["cell_type"] == "code":
         source_text = "".join(cell["source"])
-        
+
         # Inject Column Names
         if "column_names =" in source_text and "'?'" in source_text:
             # We preserve the top part of the cell if it has imports or path setup?
@@ -233,7 +235,7 @@ for cell in nb["cells"]:
         new_source = []
         # Since we are iterating lines, we need state or clever replacement.
         # Let's replace the whole source if it matches a pattern.
-        
+
         if "column_names = [" in source_text and "'?'" in source_text:
             # This is the loading cell.
             # We will keep the top part (colab check) but replace column_names and the read_csv part (to ensure it works)
@@ -246,13 +248,13 @@ for cell in nb["cells"]:
                  if "column_names = [" in line:
                      start_idx = i
                      break
-            
+
             if start_idx != -1:
                  # Keep everything before column_names
                  new_source = original_lines[:start_idx]
                  # Add new column names
                  new_source.append(column_names_code.strip() + "\n\n")
-                 
+
                  # Add the read_csv line (it was at the end)
                  # We skip the original list lines until we hit ']'
                  end_idx = -1
@@ -260,39 +262,39 @@ for cell in nb["cells"]:
                      if "]" in original_lines[i]:
                          end_idx = i
                          break
-                 
+
                  if end_idx != -1:
                       # Append the rest after the list
                       new_source.extend(original_lines[end_idx+1:])
             else:
                  new_source = original_lines
-            
+
             cell["source"] = new_source
 
         elif "df_clean = df_raw.copy()" in source_text:
             cell["source"] = [cleaning_code.strip()]
-            
+
         elif "df_model = df_clean.copy()" in source_text:
              cell["source"] = [binary_income_code.strip()]
-             
+
         elif "df_analysis = df_model.copy()" in source_text:
              cell["source"] = [analysis_code.strip()]
-        
+
         elif "# Vanuse jaotus (histogramm)" in source_text:
              cell["source"] = [viz1_code.strip()]
-             
+
         elif "# Keskmised töötunnid ametite lõikes" in source_text:
              cell["source"] = [viz2_code.strip()]
-             
+
         elif "# Korrelatsioonid arvuliste tunnuste vahel" in source_text:
              cell["source"] = [viz3_code.strip()]
-             
+
         elif "# Töötundide jaotus soo lõikes" in source_text:
              cell["source"] = [viz4_code.strip()]
-             
+
         elif "# Vanus tulugruppide lõikes" in source_text:
              cell["source"] = [viz5_code.strip()]
-        
+
         else:
              # Just translate comments
              new_source = []

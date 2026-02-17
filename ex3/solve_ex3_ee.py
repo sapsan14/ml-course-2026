@@ -124,11 +124,11 @@ with open("ex3/EX03_adults.ipynb", "r") as f:
 
 for cell in nb["cells"]:
     # No markdown translation loops needed for the original Estonian file.
-    
+
     # Inject Code
     if cell["cell_type"] == "code":
         source_text = "".join(cell["source"])
-        
+
         # Inject Column Names
         if "column_names = [" in source_text and "'?'" in source_text:
             original_lines = cell["source"]
@@ -153,25 +153,25 @@ for cell in nb["cells"]:
 
         elif "df_clean = df_raw.copy()" in source_text:
             cell["source"] = [cleaning_code.strip()]
-            
+
         elif "df_model = df_clean.copy()" in source_text:
              cell["source"] = [binary_income_code.strip()]
-             
+
         elif "df_analysis = df_model.copy()" in source_text:
              cell["source"] = [analysis_code.strip()]
-        
+
         elif "# Vanuse jaotus (histogramm)" in source_text:
              cell["source"] = [viz1_code.strip()]
-             
+
         elif "# Keskmised töötunnid ametite lõikes" in source_text:
              cell["source"] = [viz2_code.strip()]
-             
+
         elif "# Korrelatsioonid arvuliste tunnuste vahel" in source_text:
              cell["source"] = [viz3_code.strip()]
-             
+
         elif "# Töötundide jaotus soo lõikes" in source_text:
              cell["source"] = [viz4_code.strip()]
-             
+
         elif "# Vanus tulugruppide lõikes" in source_text:
              cell["source"] = [viz5_code.strip()]
 

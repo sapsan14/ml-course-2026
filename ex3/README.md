@@ -3,10 +3,10 @@ Completion requirements
 To do: Complete the activity
 ADULTS
 
-Andmestik: 
-Täiskasvanute sissetulekud - https://archive.ics.uci.edu/dataset/2/adult 
-Andmestik sisaldab USA 1994. aasta rahvaloenduse infot täiskasvanud isikute kohta (vanus, tööklass, haridus, perekonnaseis, amet, suhe, rass, sugu, töötunnid nädalas, kas nad teenivad rohkem kui 50 000 dollarit aastas, jne.). 
- Loo Google Colab-is jupyter notebook kasutades Moodles etteantud malli. 
+Andmestik:
+Täiskasvanute sissetulekud - https://archive.ics.uci.edu/dataset/2/adult
+Andmestik sisaldab USA 1994. aasta rahvaloenduse infot täiskasvanud isikute kohta (vanus, tööklass, haridus, perekonnaseis, amet, suhe, rass, sugu, töötunnid nädalas, kas nad teenivad rohkem kui 50 000 dollarit aastas, jne.).
+ Loo Google Colab-is jupyter notebook kasutades Moodles etteantud malli.
 
  Ülesanded:
 1. Andmete laadimine ja puhastamine:
@@ -32,12 +32,12 @@ Visualisatsioonide tegemiseks järgi Notebook mallis antud soovitusi
 
 
 Esitamise instruktsioonid
-Lahenda ülesanne Google Colab Notebook’is  
-Veendu, et notebook: 
- töötab algusest lõpuni ilma vigadeta, 
- Notebook’i nimetus on EX03_adults.ipynb 
- Notebook sisaldab vajalikku koodi. 
- Jaga oma notebook’i linki järgmiste õigustega: 
- General access: Anyone with the link 
- Permission: Viewer 
+Lahenda ülesanne Google Colab Notebook’is
+Veendu, et notebook:
+ töötab algusest lõpuni ilma vigadeta,
+ Notebook’i nimetus on EX03_adults.ipynb
+ Notebook sisaldab vajalikku koodi.
+ Jaga oma notebook’i linki järgmiste õigustega:
+ General access: Anyone with the link
+ Permission: Viewer
  Esita ainult notebook’i link Moodle’I allolevas lahtris
