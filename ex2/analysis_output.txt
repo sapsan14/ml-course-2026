@@ -1,0 +1,99 @@
+--- 1. Men's bills vs Women's bills ---
+        count       mean       std   min    25%    50%    75%    max
+sex                                                                 
+Female   87.0  18.056897  8.009209  3.07  12.75  16.40  21.52  44.30
+Male    157.0  20.744076  9.246469  7.25  14.00  18.35  24.71  50.81
+
+--- 2. Women's tips vs Men's tips ---
+        count      mean       std  min  25%   50%   75%   max
+sex                                                          
+Female   87.0  2.833448  1.159495  1.0  2.0  2.75  3.50   6.5
+Male    157.0  3.089618  1.489102  1.0  2.0  3.00  3.76  10.0
+
+--- 3. Smokers vs Non-smokers tips (Variability and Median) ---
+             std       var  median
+smoker                            
+No      1.377190  1.896653    2.74
+Yes     1.401468  1.964111    3.00
+
+--- 4. Visitors by day ---
+day
+Sat     87
+Sun     76
+Thur    62
+Fri     19
+Name: count, dtype: int64
+
+--- 5. Correlation between total_bill and tip ---
+            total_bill       tip
+total_bill    1.000000  0.675734
+tip           0.675734  1.000000
+
+--- 6. Average tip by day ---
+day
+Thur    2.771452
+Fri     2.734737
+Sat     2.993103
+Sun     3.255132
+Name: tip, dtype: float64
+
+--- 7. Does larger bill always mean larger tip? ---
+Correlation is high but not 1.0. scatterplot shows spread.
+
+--- 8. Tips < 5 dollars ---
+Percentage < 5: 88.52%
+
+--- 9. Tip around 4 dollars ---
+0    2.0
+Name: tip, dtype: float64
+tip
+2.00    33
+3.00    23
+4.00    12
+5.00    10
+2.50    10
+3.50     9
+1.50     9
+1.00     4
+1.25     3
+3.48     3
+Name: count, dtype: int64
+count    244.000000
+mean       2.998279
+std        1.383638
+min        1.000000
+25%        2.000000
+50%        2.900000
+75%        3.562500
+max       10.000000
+Name: tip, dtype: float64
+Tips between 3.5 and 4.5: 16.80%
+Tips between 1.5 and 2.5: 37.30%
+
+--- General 1. Class Counts ---
+sex
+Male      157
+Female     87
+Name: count, dtype: int64
+smoker
+No     151
+Yes     93
+Name: count, dtype: int64
+
+--- General 2. Correlation ---
+            total_bill       tip      size
+total_bill    1.000000  0.675734  0.598315
+tip           0.675734  1.000000  0.489299
+size          0.598315  0.489299  1.000000
+
+--- General 3. Outliers by day ---
+      count      mean       std   min     25%    50%     75%    max
+day                                                                
+Fri    19.0  2.734737  1.019577  1.00  1.9600  3.000  3.3650   4.73
+Sat    87.0  2.993103  1.631014  1.00  2.0000  2.750  3.3700  10.00
+Sun    76.0  3.255132  1.234880  1.01  2.0375  3.150  4.0000   6.50
+Thur   62.0  2.771452  1.240223  1.25  2.0000  2.305  3.3625   6.70
+Thur: 2 outliers, max: 6.7
+Fri: 0 outliers, max: 4.73
+Sat: 6 outliers, max: 10.0
+Sun: 0 outliers, max: 6.5
