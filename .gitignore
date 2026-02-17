@@ -24,3 +24,8 @@ Thumbs.db
 
 # Local outputs (optional; remove if you want to track clean CSVs)
 clean_dataset_*.csv
+
+# Google Drive sync
+credentials.json
+token.pickle
+gdrive_sync_config.json
