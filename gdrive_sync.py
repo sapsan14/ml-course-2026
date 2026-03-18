@@ -44,7 +44,9 @@ class GDriveSync:
                 "sync_folders": [
                     "ex1",
                     "ex2", 
-                    "ex3"
+                    "ex3",
+                    "ex4__auto_mpg",
+                    "ex5"
                 ],
                 "sync_extensions": [
                     ".ipynb",
